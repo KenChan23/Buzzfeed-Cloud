@@ -1,3 +1,4 @@
+--allow-external vboxapi  # You probably need this as well.
 --allow-unverified vboxapi
 Flask==0.10.1
 gunicorn==19.3.0
