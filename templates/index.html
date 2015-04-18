@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BuzzMemes</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/buzzfeed.png')}}"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script text="text/javascript" src="{{ url_for('static', filename='js/d3.layout.cloud.js') }}"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 id="buzzmemes-title">BuzzCloud</h1>
+    <h4 id="subtitle"></h4>
+    <div class="col center meme-image z-depth-2">
+    </div>
+    <div class="row generate">
+        <input id="generate-text" class="btn waves-effect waves-light" value="Generate Text" readonly>
+        <input id="generate-meme" class="btn waves-effect waves-light" value="Generate Meme" readonly>
+    </div>
+    <div class="row share">
+      <div class="social-media-icons col s12">
+          <a class="icon fb-icon" href="http://www.facebook.com">
+            <i class="fa fa-3x fa-facebook-official"></i>
+          </a>
+          <a class="icon tw-icon" href="http://twitter.com/share?url=http://www.simplesharebuttons.com&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank">
+            <i class="fa fa-3x fa-twitter-square"></i>
+          </a>
+          <a class="icon mail-icon" href="http://www.gmail.com">
+            <i class="fa fa-3x fa-envelope"></i>
+          </a>
+          <a class="icon pn-icon" href="http://www.pinterest.com">
+            <i class="fa fa-3x fa-pinterest-square"></i>
+          </a>
+          <a class="icon gg-icon" href="http://plus.google.com">
+            <i class="fa fa-3x fa-google-plus-square"></i>
+          </a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/cloud.js') }}"></script>
+</body>
+</html>

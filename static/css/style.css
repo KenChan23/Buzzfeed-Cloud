@@ -1,0 +1,125 @@
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  color: #ee3322;
+}
+
+#buzzmemes-title {
+  color: #EE3322;
+  font-weight: bold;
+}
+
+.social-media-icons {
+  margin: 0 auto;
+  text-align: center;
+  margin: 10px 0 30px 0;
+}
+
+#subtitle {
+  margin: 0 auto;
+  text-align: center;
+  color: #666666;
+  width: 65%;
+}
+
+.text {
+  background-color: #ef5350;
+}
+
+.text:hover {
+	background-color: #ef5350;
+}
+
+.share > h4 {
+  margin: 3px auto 10px auto;
+  text-align: center;
+}
+
+.meme-image {
+  height: 400px;
+  width: 400px;
+  background: url('../images/buzzfeed-arrow.jpg') center;
+  margin: 0 auto !important;
+  text-align: center;
+  position: relative;
+}
+
+.generate {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.generate input{
+  display: inline-block;
+}
+
+.generate #generate-text {
+  background-color: #FFF600;
+  color: black;
+}
+
+.generate #generate-meme {
+  background-color: #EE3322;
+  color: white;
+}
+
+.icon {
+  margin: 0 3% 0 3%;
+}
+
+.fb-icon {
+  color: #3c5898;
+}
+
+.fb-icon:hover {
+  color: #243d7f;
+}
+
+.tw-icon {
+  color: #6aadd1;
+}
+
+.tw-icon:hover {
+  color: #00aced;
+}
+
+.mail-icon {
+  color: #666666
+}
+
+.mail-icon:hover {
+  color: #4a4a4a;
+}
+
+.pn-icon {
+  color: #de010d;
+}
+
+.pn-icon:hover {
+  color: #e32;
+}
+
+.gg-icon {
+  color: #cd3627;
+}
+
+.gg-icon:hover {
+  color: #be1f14;
+}
+
+.legend {
+        border: 1px solid #555555;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 0.8em;
+        margin: 10px;
+        padding: 8px;
+    }
+    .bld {
+        font-weight: bold;
+    }
+
+@media (max-width: 410px) {
+  .row.generate input {
+    margin-top: 10px;
+  }
+}
