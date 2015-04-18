@@ -1,5 +1,4 @@
---allow-external vboxapi  # You probably need this as well.
---allow-unverified vboxapi
+
 Flask==0.10.1
 gunicorn==19.3.0
 itsdangerous==0.24
@@ -11,7 +10,6 @@ requests==2.6.0
 six==1.9.0
 stevedore==1.2.0
 topia.termextract==1.1.0
-vboxapi==1.0
 virtualenv==12.1.1
 virtualenv-clone==0.2.5
 virtualenvwrapper==4.3.2
