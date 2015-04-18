@@ -4,8 +4,8 @@ $(function() {
         // var fill = d3.scale.category20();
     //what range of font sizes do we want, we will scale the word counts
 
-    d3.select('.col.meme-image').append('div').classed('preloader-wrapper', true).classed('big', true).classed('active', true)
-                                .style('position', 'relative').style('margin-top','180px')
+    d3.select('.col.meme-image').insert('div', ':first-child').classed('preloader-wrapper', true).classed('big', true).classed('active', true)
+                                .style('position', 'absolute').style('left', '45%').style('margin-top','180px')
                                 .append('div').classed('spinner-layer', true).classed('spinner-blue-only', true)
                                 .style('border-color', '#FFF600')
                                 .append('div').classed('circle-clipper', true).classed('left', true)
@@ -16,6 +16,7 @@ $(function() {
     var MIN_SIZE = 0;
     var MAX_SIZE = 80;
     var results;
+    var original_data;
 
     var parentWidth = 400;
     var parentHeight = 400;
@@ -62,7 +63,22 @@ $(function() {
             .duration(1000)
             .style("opacity", 1)
             .text(function(d) { return d.text; });
+
+
       }
+
+      function setShareIcons(){
+    console.log($(original_data));
+    var $tw = $(".tw-icon");
+    var $fb = $(".fb-icon");
+    var $gp = $(".gg-icon");
+    var $email = $(".fa-envelope");
+    $tw.attr("href","http://twitter.com/share?url="+original_data.url+'&text=Check out this BuzzCloud!');
+    $fb.attr("href","https://www.facebook.com/sharer/sharer.php?u="+original_data.url);
+    $gp.attr("href","https://plus.google.com/share?url="+original_data.url);
+    $email.attr("href","mailto:?Subject="+original_data.title+"&Body=Check%20out%20this%20BuzzCloud! "+original_data.url);
+
+}
 
     //ajax call
     function get_words() {
@@ -81,7 +97,9 @@ $(function() {
           complete: function(xhr, textStatus){
             console.log("Finished" + xhr);
             console.log(results);
+            
             mycloud.stop().words(results).start();
+            setShareIcons();
           },
           error: function(error){
             console.warn("error");
@@ -102,6 +120,7 @@ $(function() {
 
 
         $.when(wordDeferred).done(function(data){
+            original_data = data;
                 // Remove old SVG element and children elements
                 d3.select('.col.meme-image div.preloader-wrapper.active').remove();
                 d3.select('#subtitle').text('');
